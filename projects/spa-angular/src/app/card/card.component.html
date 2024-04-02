@@ -1,0 +1,32 @@
+<h1>My App</h1>
+<p>card works!</p>
+<ul>
+  <li *ngFor="let p of produtos; let i = index">
+    {{ i + 1 }} - {{ p }}
+  </li>
+</ul>
+
+<!-- New Syntax -->
+<!-- <ul>
+  @for (p of produtos; track produtos) {
+    <li>{{ p }}</li>
+  }
+</ul> -->
+
+<!-- Renderização Condicional com ngSwitch -->
+<div [ngSwitch]="menuType">
+  <div *ngSwitchDefault>
+    <ul>
+      <li>Editar Perfil</li>
+      <li>Adciionar Cartão</li>  
+    </ul>
+  </div>
+
+  <div *ngSwitchCase="'admin'">
+    <ul>
+      <li>Editar Perfil</li>
+      <li>Adciionar Cartão</li>
+      <li>Gerenciar Usuários</li>  
+    </ul>
+  </div>
+</div>
