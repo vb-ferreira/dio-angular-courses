@@ -266,6 +266,94 @@
           }
         }
       }
+    },
+    "rotas-angular": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/rotas-angular",
+      "sourceRoot": "projects/rotas-angular/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/rotas-angular",
+            "index": "projects/rotas-angular/src/index.html",
+            "browser": "projects/rotas-angular/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/rotas-angular/tsconfig.app.json",
+            "assets": [
+              "projects/rotas-angular/src/favicon.ico",
+              "projects/rotas-angular/src/assets"
+            ],
+            "styles": [
+              "projects/rotas-angular/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "rotas-angular:build:production"
+            },
+            "development": {
+              "buildTarget": "rotas-angular:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "rotas-angular:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/rotas-angular/tsconfig.spec.json",
+            "assets": [
+              "projects/rotas-angular/src/favicon.ico",
+              "projects/rotas-angular/src/assets"
+            ],
+            "styles": [
+              "projects/rotas-angular/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   }
 }
