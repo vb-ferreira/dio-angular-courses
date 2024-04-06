@@ -1,0 +1,16 @@
+* {
+  background-color: #121212;
+}
+
+.container__home {
+  padding: 0 2rem 2rem 2rem;
+  max-width: 80%;
+  margin: 0 auto; 
+}
+
+.container__articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}

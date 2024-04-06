@@ -14,7 +14,6 @@ export class CompAtributosComponent {
   item: string = '';
 
   trocar() {
-    console.log(this.item)
     if (this.estilo == 'disable') {
       this.estilo = 'enable';
     } else {

@@ -1,0 +1,28 @@
+.container__small-card {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; 
+}
+
+.small-card__photo {
+  max-inline-size: 55%;
+}
+
+.small-card__photo > img {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.small-card__date > p {
+  color: #5a5a5a;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.small-card__title h1 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}

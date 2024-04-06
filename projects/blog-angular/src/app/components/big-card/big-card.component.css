@@ -1,0 +1,31 @@
+.container__big-card {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.big-card__photo > img {
+  max-inline-size: 100%;
+  block-size: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+} 
+
+.big-card__date > p {
+  color: #5a5a5a;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.big-card__title h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.big-card__description > p {
+  color: #5a5a5a;
+  margin-top: 1rem;
+}

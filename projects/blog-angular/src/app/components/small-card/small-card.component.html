@@ -1,0 +1,11 @@
+<div class="container__small-card">
+  <div class="small-card__photo">
+    <img [src]="imagePath" alt="placeholder image">
+  </div>
+  <div class="small-card__title">
+    <div class="small-card__date">
+      <p>{{ cardDate.getMonth() + 1}}/{{ cardDate.getFullYear() }}</p>
+    </div>
+    <h1><a [routerLink]="['content', id]">{{ cardTitle }}</a></h1>
+  </div>
+</div> 
